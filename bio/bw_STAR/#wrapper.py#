@@ -1,0 +1,4 @@
+
+shell("""
+module load STAR
+STAR 
