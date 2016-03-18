@@ -8,6 +8,7 @@ rule rnaseqc:
     output: "rseqc/{sample}/metrics.tsv"
     params: 
         rulename="rnaseqc",
+        batch="-c 2 --mem=22g",
         sampleFile="'{sample}|{base}/{sample}.bam|{sample}'", 
         outDir="rseqc/{sample}",
         gencode_gc=config["gencode_gc"],
